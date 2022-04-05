@@ -1,0 +1,68 @@
+@charset "URF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+:root{
+    --cor1: #E2E2E2;
+    --cor2: #D8D4D5;
+    --cor3: #6E7271;
+    --cor4: #0A2239;
+    --cor5: #1D1128;
+
+    --font-destaque: 'Baloo 2',
+    cursive;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor4);
+}
+header{
+    height: 100vh;
+    position: relative;
+    /*background-color: var(--cor3);*/
+    background-image: url(img/header-background01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 1px 1px 90px #00000090 inset;
+    text-align: center;
+}
+.title{
+    position: absolute;
+    background-color: #00000090;
+    border-radius: 5px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header h1{
+    padding-top: 0px;
+    padding-bottom: 5px;
+    color: var(--cor1);
+    font-family: var(--font-destaque);
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px #00000060;
+}
+.br{
+    height: 2px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 1px 1px 4px #00000060;
+    margin: auto;
+}
+header p{
+    font-family: var(--font-destaque);
+    color: var(--cor1);
+    text-shadow: 1px 1px 6px #00000060;
+    padding-top: 15px;
+}
+main{
+    height: 1000px;
+    background-color: var(--cor1);
+}
