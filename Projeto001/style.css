@@ -84,10 +84,6 @@ nav {
     left: 10px;
     
 }
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
 input[type=checkbox]{
     display: none;
 }
@@ -103,41 +99,36 @@ input[type=checkbox]{
 }
 .nav-content{
     display: none;
-    position: absolute;
+    position: absolute; /* Faz com que lista sobreponha qualquer elemento abaixo */
     height: 120px;
     width: 120px;
     background: linear-gradient(to right bottom, #ffffff5e, #ffffffef);
     box-shadow: 2px 2px 9px #0000006d;
-    border-radius: 10px;
-    z-index: 1;
+    border-radius: 5px;
+    z-index: 1; /* Tras o elemento à frente de todos os outros */
 }
 .nav-content ul{
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
 }
 .nav-content ul li{
     width: 100px;
-    flex: 23%;
     text-align: left;
     border-radius: 15px;
     padding: 5px;
-    margin: 2px 0px;
 }
 .nav-content ul li img{
+    vertical-align: text-bottom;
     width: 20%;
     padding-right: 5px;
 }
 .nav-content ul a{
-    display: flex;
-    width: auto;
-    height: 100%;
+    vertical-align: middle;
     text-decoration: none;
-    align-items: center;
-    justify-content: left;
     font-family: var(--font-default);
     color: #161616;
 }

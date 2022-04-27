@@ -1,7 +1,18 @@
 @media screen and (min-width: 1600px) {
 
+    .nav-content{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+    .nav-content ul li{
+        width: 160px;
+    }
     .nav-content ul a{
-        font-size: 30px;
+        font-size: 25px;
+    }
+    .nav-content ul li a img{
+        width: 30px;
     }
 }
 
