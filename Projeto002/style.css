@@ -147,7 +147,6 @@ input[type="email"]:focus, input[type="password"]:focus{
 .credits > p > a:hover{
     text-decoration: underline;
 }
-
 @keyframes hue-animation {
     0% {
       filter: hue-rotate(0deg);
@@ -161,8 +160,6 @@ input[type="email"]:focus, input[type="password"]:focus{
       filter: hue-rotate(0deg);
     }
   }
-
-
 /* Prefixo -webkit- para compatibilidade com Safari */
 @-webkit-keyframes hue-animation {
    
