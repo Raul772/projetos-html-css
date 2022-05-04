@@ -21,9 +21,6 @@
     box-sizing: border-box;
     font-family: var(--font2);
 }
-body{
-    
-}
 main{
     display: flex;
     flex-wrap: wrap;
