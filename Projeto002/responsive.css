@@ -1,0 +1,22 @@
+@media screen and (max-width: 400px) {
+
+    .title h1{
+        font-size: 3em;
+    }
+    .container{
+        background: none;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    main > p{
+        position: static;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 400px) and (max-height:670px){
+
+    .credits{
+        display: none;
+    }
+
+}
