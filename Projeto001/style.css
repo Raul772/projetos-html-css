@@ -1,24 +1,26 @@
-@charset "URF-8";
+@charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nunito:wght@300&family=Palanquin:wght@700&display=swap');
+
 
 :root{
     --cor1: #fff;
-    --cor2: #D8D4D5;
-    --cor3: #58FCEC;
-    --cor4: #150578;
-    --cor5: #1D1128;
+    --cor2: #9FEDE3;
+    --cor3: #A6ECF7;
+    --cor4: #A1C7E0;
+    --cor5: #A6C1F7;
+    --cor6: #9FA5ED;
 
     --cor-hovering: #d6d6d667;
 
-    --font-destaque: 'Montserrat',
-    sans-serif;
-    --font-default: 'Roboto',
-    sans-serif;
+    --font-destaque: 'Palanquin', sans-serif;
+    --font-default: 'Nunito', sans-serif;
+    --font-presentation: 'Kaushan Script', cursive;
 }
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -28,61 +30,60 @@ body{
 header{
     height: 100vh;
     position: relative;
-    /*background-color: var(--cor3);*/
-    background-image: url(img/header-background01.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: linear-gradient(to top right, var(--cor6), #ffffff3a), url(img/header-background01.jpg);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed, fixed;
     box-shadow: 1px 1px 90px #00000090 inset, 1px 0px 20px #00000090;
     text-align: center;
 }
 .title{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background: #ffffffb4;
-    background: linear-gradient(165deg , #ffffff5e, #ffffffef);
-    box-shadow: 3px 5px 15px #00000056;
-    backdrop-filter: blur(6px);
-    border-radius: 15px;
-    padding: 25px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    color: white;
 }
 .profile-basic{
+    height: 40vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .profile-img img{
-    max-width: 150px;
-    box-shadow: 2px 4px 10px #0000006d;
-    border-radius: 100px;
+    max-width: 250px;
+    border-radius: 150px;
 }
 .profile-name{
-    margin-left: 20px;
+    padding: 20px 0px;
+    text-align: left;
+}
+.profile-presentation{
+     font-family: var(--font-presentation);
+     font-size: 2em;
 }
 .profile-name h1{
-    margin-top: 35px;
-    padding: 15px 0px;
-    color: #161616;
     font-family: var(--font-destaque);
-    font-size: 2.5em;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 3px #0000006d;
+    font-size: 4em;
+    text-transform: capitalize;
+    line-height: 0.9em;
 }
 .profile-bio {
     max-width: 440px;
-    margin-top: 25px;
+    font-size: 0.9em;
+    text-align: left;
     font-family: var(--font-default);
-    align-self: center;
 }
 nav {
     position: absolute;
     top: 10px;
-    left: 10px;
-    
+    left: 10px;  
 }
 input[type=checkbox]{
     display: none;
@@ -92,7 +93,7 @@ input[type=checkbox]{
     min-width: 20px;
     max-width: 30px;
     width: 2vw;
-    background: #ffffffad;
+    background: white;
     margin: 5px;
     border-radius: 15px;
     cursor: pointer;
@@ -121,10 +122,14 @@ input[type=checkbox]{
     border-radius: 15px;
     padding: 5px;
 }
-.nav-content ul li img{
+.img{
+    display: inline-block;
     vertical-align: text-bottom;
     width: 20%;
     padding-right: 5px;
+}
+.img img{
+    width: 100%;
 }
 .nav-content ul a{
     vertical-align: middle;
@@ -157,7 +162,7 @@ main{
 }
 .projetos h2{
     margin-bottom: 100px;
-    font-family: var(--font-destaque);
+    font-family: var(--font-default);
     font-size: 35px;
     text-transform: uppercase;
     text-align: center;
@@ -238,7 +243,7 @@ main{
     width: 60%;
 }
 .aprendizado-info h3{
-    font-family: var(--font-destaque);
+    font-family: var(--font-default);
     font-size: 1.6em;
     font-weight: bold;
     padding: 20px 0px;
@@ -262,15 +267,15 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-top: 5px solid var(--cor3);
-    background-color: var(--cor4);
+    border-top: 5px solid var(--cor2);
+    background-image: linear-gradient(to top, rgb(0, 0, 0), var(--cor6));
     color: var(--cor1);
 }
 footer p{
     text-align: center;
 }
 footer a{
-    color: var(--cor3);
+    color: var(--cor2);
     text-decoration: none;
 }
 .attribution{
