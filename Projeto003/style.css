@@ -17,6 +17,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body{
+    width: auto;
+}
 
 /*--------------- Barra de navegação ---------------- */
 
@@ -66,7 +69,6 @@ nav{
 /* ------------------- Sessão 1 --------------------- */
 
 .section-one{
-    height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -113,7 +115,6 @@ nav{
 /* ------------------- Sessão 2 --------------------- */
 
 .section-two{
-    height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -148,7 +149,6 @@ nav{
 
 .section-three{
     max-width: 790px;
-    height: 20vh;
     margin: auto;
     margin-bottom: 100px;
 }
@@ -162,6 +162,7 @@ nav{
     width: 200px;
     height: 30px;
     padding: 20px;
+    margin-bottom: 10px;
     border-radius: 16px;
     border: none;
     background-color: var(--color-background-gray);
@@ -186,17 +187,16 @@ nav{
 
 .section-four{
     display: grid;
-    height: 40vh;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5%;
+    margin-bottom: 50px;
     justify-items: start;
     align-items: center;
 }
 .section-four-card1, .section-four-card2{
     display: flex;
     padding: 20px;
-    width: 450px;
-    height: 140px;
+    max-width: 450px;
     background: var(--color-background-gray);
     font-family: var(--font-default);
     font-size: 0.9em;
@@ -225,7 +225,6 @@ nav{
 
 .footer-container{
     display: grid;
-    height: 30vh;
     padding: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10%;
