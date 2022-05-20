@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap');
+
+:root{
+
+    --color-dBlue: #576CFF;
+    --color-dBlue-light: #4F8AE8;
+    --color-skyBlue: #64C8FF;
+    --color-cyanBlue: #4FDBE8;
+    --color-aquaCyan: #57FFDF;
+    --color-lightgray: #d6d6d6;
+
+    --font-1: 'Nunito', sans-serif;
+
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Esconder a scrollbar no Chrome, Safari e Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Esconder a Scrollbar em IE, Edge e Firefox */
+body{
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.topbar{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background: #202020;
+}
+.topbar img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sidebar{
+
+    width: 15vw;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe;
+
+}
+.profile{
+
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.profile-picture img{ 
+    width: 100%;
+    border: 5px solid #202020;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #bebebe;
+}
+.profile-info{
+    color: #202020;
+    
+}
+.profile-info h2{
+    font-family: var(--font-1);
+}
