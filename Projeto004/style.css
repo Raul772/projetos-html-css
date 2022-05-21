@@ -1,6 +1,20 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&family=Source+Sans+Pro:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Segoe UI Variable';
+    src: url(fonts/SegoeUIVF.ttf);
+    font-weight: normal;
+    font-size: 1em;
+}
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url(fonts/Bahnschrift.TTF);
+    font-weight: 100;
+    font-size: 1em;
+}
+
 
 :root{
 
@@ -10,8 +24,14 @@
     --color-cyanBlue: #4FDBE8;
     --color-aquaCyan: #57FFDF;
     --color-lightgray: #d6d6d6;
+    --color-smoke: #f5f5f5;
+    --color-dark: #202020;
 
     --font-1: 'Nunito', sans-serif;
+    
+    --font-logo-1: 'Source Sans Pro', sans-serif;
+    --font-logo-2: 'Segoe UI Variable', sans-serif;
+    --font-logo-3: 'Bahnschrift', sans-serif;
 
 }
 *{
@@ -28,31 +48,46 @@ body::-webkit-scrollbar {
 body{
     -ms-overflow-style: none;  /* IE e Edge */
     scrollbar-width: none;  /* Firefox */
+
+    background: var(--color-smoke);
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:'x x'
+                        'y z';
 }
 
 .topbar{
     position: relative;
+    grid-area: x;
     width: 100%;
-    height: 25px;
-    background: #202020;
+    height: 30px;
+    background: var(--color-dark);
+
 }
-.topbar img{
-    height: 100%;
+.topbar h1{
+    font-size: 1.3em;
+    font-family: var(--font-logo-1);
+    line-height: 1.4em;
+    color: white;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 .sidebar{
-
+    grid-area: y;
+    background: var(--color-smoke);
     width: 15vw;
-    height: 100vh;
+    height: 96vh;
     padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    
     align-items: center;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe;
 
 }
 .profile{
@@ -67,14 +102,21 @@ body{
 }
 .profile-picture img{ 
     width: 100%;
-    border: 5px solid #202020;
+    border: 5px solid var(--color-dark);
     border-radius: 50%;
-    box-shadow: 5px 5px 10px #bebebe;
 }
 .profile-info{
-    color: #202020;
+    color: var(--color-dark);
     
 }
 .profile-info h2{
     font-family: var(--font-1);
+}
+.games{
+    grid-area: z;
+    width: 85vw;
+    border-top-left-radius: 20px;
+    background: linear-gradient(90deg, rgba(136,181,255,1) 11%, rgba(193,254,255,1) 100%);
+    box-shadow: 2px 5px 30px #2020203d inset;
+    
 }
