@@ -145,11 +145,11 @@ input[type=checkbox]{
 }
 main{
 
-    background-color: white;
-    background-image: url(img/project-background01.jpg);
+    background-color: #202020;
+    background-image: linear-gradient(to bottom right, #9fa5ed, #9fa5ed48);
     background-size: cover;
     background-position: right top;
-    background-attachment: fixed;
+    background-attachment: scroll;
     padding: 100px;
 }
 .projetos{
@@ -162,6 +162,7 @@ main{
 }
 .projetos h2{
     margin-bottom: 100px;
+    color: white;
     font-family: var(--font-default);
     font-size: 35px;
     text-transform: uppercase;
@@ -190,7 +191,8 @@ main{
     background: #ffffffd6;
     /*border: 1px solid var(--cor5);*/
     border-radius: 10px;
-    box-shadow: 2px 3px 10px #0000006d;    
+    box-shadow: 2px 3px 10px #0000006d; 
+    transition: all 0.5s;   
 }
 .card img{
     width: 100%;
@@ -268,7 +270,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     border-top: 5px solid var(--cor2);
-    background-image: linear-gradient(to top, rgb(0, 0, 0), var(--cor6));
+    background: black;
     color: var(--cor1);
 }
 footer p{
