@@ -146,7 +146,8 @@ input[type=checkbox]{
 main{
 
     background-color: #202020;
-    background-image: linear-gradient(to bottom right, #9fa5ed, #9fa5ed48);
+    background: url(img/25098.jpg), #222433;
+    background-blend-mode: soft-light, normal; 
     background-size: cover;
     background-position: right top;
     background-attachment: scroll;
