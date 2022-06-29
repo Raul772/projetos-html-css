@@ -195,10 +195,18 @@ main{
     box-shadow: 2px 3px 10px #0000006d; 
     transition: all 0.5s;   
 }
-.card img{
+.card .symbol{
     width: 100%;
-    border-radius: 10px;
+    height: 180px;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    line-height: 180px;
+    text-align: center;
     border: 1px hidden;
+    font-family: var(--font-default);
+    font-weight: bolder;
+    font-size: 4em;
+    text-shadow: 3px 3px 1px white;
 }
 .card h3{
     margin-top:20px;
@@ -215,6 +223,7 @@ main{
 .back p{
     margin-top: 20px;
     text-align: left;
+    text-align: center;
 }
 .card:hover{
     background: white;
