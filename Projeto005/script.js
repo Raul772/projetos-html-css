@@ -13,10 +13,11 @@ const clock = setInterval(function updateTime(){
     minutes.textContent = newMinutes;
     seconds.textContent = newSeconds;
 
-    if(newHours > 12){
+    if(newHours >= 12){
         period.textContent = "PM";
         hours.textContent = (newHours - 12).toString().padStart(2, "0");
     }else{
+        period.textContent = "AM";
         hours.textContent = (newHours).toString().padStart(2, "0");
     }
 });
