@@ -20,9 +20,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 50%;
+    min-width: 550px;
     max-width: 70%;
-    min-height: 50%;
+    min-height: 230px;
     border-radius: 50px;
     background: linear-gradient(145deg, #f0f0f0, #cacaca);
     box-shadow:  24px 24px 51px #bebebe,
