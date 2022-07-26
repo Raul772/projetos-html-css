@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextStep - Empresa Júnior</title>    
+    <link rel="shortcut icon" href="media/NextStep-Logo.png">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/interaction.css">
+    <script src="src/script.js" defer="defer"></script>
+
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="media/NextStep-Logo.png" alt="NextStep Logo">
+                <h1 id="logo-text">NextStep</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="presentation">
+        <div class="presentation-container">
+            <p class="presentation-text">O próximo passo para o seu <br><span id="presentation-destaque">futuro!</span></p>
+        </div>
+    </section>
+
+    <section class="services">
+
+        <h2 class="services-title">NOSSOS SERVIÇOS</h2>
+
+        <div class="services-container">
+
+            <div class="services-list">
+                <button onclick="slide_1()">Web Development</a>
+                <button onclick="slide_2()">Identidades Visuais</a>
+            </div>
+
+            <div class="services-carousel-container">
+                <div class="service-card-stack" id="slides">
+                    <div class="service-card">
+                        <h3>Web Development</h3>
+                        <p>Leve sua marca para o mundo digital e tenha seu próprio WebSite com a NextStep!</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Identidades Visuais</h3>
+                        <p>A identidade visual é um conjunto de elementos visuais que tornará sua ideia atraente para seu público. Venha "vestir" sua empresa com a NextStep!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <div class="contact-us-container">
+            <div class="contact-us-text">
+                <h2>Bora fechar?</h2>
+                <p>E aí? Precisa da ajudinha de um especialista? Nos envie seu email que nós entramos em contato!!</p>
+                <input type="email" placeholder="exemplo@email.com" id="contact-us-emailbox">
+                <button type="submit" id="contact-us-btn">Enviar</button>
+            </div>
+            <img src="../Site/media/contact-us.jpg" alt="Um Laptop" class="contact-us-img">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <section class="about">
+                <div class="about-text">
+                    <h2>Sobre a NextStep</h2>
+                    <p>A <span id="about-highlight">Next Step</span> é uma empresa júnior (sem fins lucrativos) do curso de Sistemas de Informação da Universidade Federal dos Vales do Jequitinhonha e Mucuri.
+                    A empresa é um exemplo de EJ, criada pelos alunos do curso de SI da UFVJM, buscando contribuir para o desenvolvimento socioeconômico da comunidade, como também para o desenvolvimento educacional de seus membros e estudantes do curso.</p>
+                </div>
+            </section>
+            
+                <div class="footer-social-media">
+                    <a href="https://www.instagram.com/nextstep.ej/" target="_blank"><img src="../Site/media/instagram.png" alt=""></a>
+                    <a href="https://www.facebook.com/nextstepsi" target="_blank"><img src="../Site/media/facebook.png" alt=""></a>
+                    <a href="https://www.linkedin.com/company/nextstepsi/" target="_blank"><img src="../Site/media/linkedin.png" alt=""></a>
+                </div>
+                <div class="footer-location">
+                    <h3>Localização</h3>
+                    <p>UFVJM - Campus JK, Rodovia MGT 367 – Km 583, nº 5000. Prédio de Sistemas de Informação, segundo andar.</p>
+                </div>
+                <div class="footer-references">
+                    <h3>Referências:</h3>
+                    <a href='https://www.freepik.com/photos/meeting' target="_blank">Meeting photo created by rawpixel.com - www.freepik.com</a><br>
+                    <a href='https://www.freepik.com/vectors/monitor-icon' target="_blank">Monitor icon vector created by rawpixel.com - www.freepik.com</a>
+                </div>
+        </div class="footer-container">
+
+        
+    </footer>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+:root{
+    --color-oldschool-gray: #353535;
+    --color-highlight-green: #00ca50;
+    --color-main-green: #01a664;
+    --color-blue: #00c0e5;
+
+    --font-logo: 'Exo 2', sans-serif;
+    --font-default: 'Source Sans Pro', sans-serif;
+}
+
+.nav-links li:hover{
+    transition: all .3s;
+    background-color: var(--color-highlight-green);
+}
+.services-list label:hover{
+    color: var(--color-highlight-green);
+    cursor: pointer;
+}
+#contact-us-btn:hover{
+    background: var(--color-main-green);
+    
+}
