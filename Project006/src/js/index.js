@@ -1,66 +1,107 @@
-let display = document.getElementById('display-numbers');
+const numbers = document.querySelectorAll('[data-number]');
+const operators = document.querySelectorAll('[data-operator]');
+const equals = document.querySelector('[data-equals]');
+const del = document.querySelector('[data-del]');
+const ac = document.querySelector('[data-ac]');
 
-function display_1(){
+const previous_operand_text = document.querySelector('[data-previous-operand]');
+const current_operand_text = document.querySelector('[data-current-operand]');
 
-    if (display.innerHTML == '0') display.innerHTML = '1';
-    else
-    display.innerHTML += '1';
+class Calculator{
+    constructor(previous_operand_text, current_operand_text){
+        this.previous_operand_text = previous_operand_text;
+        this.current_operand_text = current_operand_text;
+        this.clear();
+        this.updateDisplay();
+    }
+
+    delete(){
+        this.current_operand = this.current_operand.toString().slice(0, -1);
+    }
+
+    chooseOperation(operation){
+        
+        if (this.previous_operand != '') this.calculate();
+
+        this.operation = operation;
+        this.previous_operand = this.current_operand;
+        this.current_operand = '0';
+    }
+
+    clear(){
+        this.current_operand = '0';
+        this.previous_operand = '';
+        this.operation = undefined;
+    }
+
+    updateDisplay(){
+        this.previous_operand_text.innerHTML = `${this.previous_operand} ${this.operation || ''}`;
+        this.current_operand_text.innerHTML = this.current_operand;
+    }
+
+    appendNumber(number){
+        if (this.current_operand.toString().includes(".") && number === '.') return;
+        if (this.current_operand == 0) this.current_operand = '';
+
+        this.current_operand = `${this.current_operand}${number}`;
+    }
+
+    calculate(){
+        let result;
+        const calc_previous_operand = parseFloat(this.previous_operand);
+        const calc_current_operand = parseFloat(this.current_operand);
+
+        switch(this.operation){
+            case '+':
+                result = calc_previous_operand + calc_current_operand;
+                break;
+            case '-':
+                result = calc_previous_operand - calc_current_operand;
+                break;
+            case '÷':
+                result = calc_previous_operand / calc_current_operand;
+                break;  
+            case '*':
+                result = calc_previous_operand * calc_current_operand;
+                break; 
+
+            default: return;  
+        }
+
+        this.current_operand = result;
+        this.operation = undefined;
+        this.previous_operand = '';
+    }
 }
-function display_2(){
 
-    if (display.innerHTML == '0') display.innerHTML = '2';
-    else
-    display.innerHTML += '2';
-}
-function display_3(){
+const calculator = new Calculator(previous_operand_text, current_operand_text);
 
-    if (display.innerHTML == '0') display.innerHTML = '3';
-    else
-    display.innerHTML += '3';
-}
-function display_4(){
+ac.addEventListener('click', () => {
+    calculator.clear();
+    calculator.updateDisplay();
+});
 
-    if (display.innerHTML == '0') display.innerHTML = '4';
-    else
-    display.innerHTML += '4';
-}
-function display_5(){
+equals.addEventListener('click', () => {
+    calculator.calculate();
+    calculator.updateDisplay();
+});
 
-    if (display.innerHTML == '0') display.innerHTML = '5';
-    else
-    display.innerHTML += '5';
-}
-function display_6(){
+del.addEventListener('click', () => {
+    calculator.delete();
+    calculator.updateDisplay();
+});
 
-    if (display.innerHTML == '0') display.innerHTML = '6';
-    else
-    display.innerHTML += '6';
+for (const number of numbers){
+    number.addEventListener('click', () => {
+        calculator.appendNumber(number.innerText);
+        calculator.updateDisplay();
+    });
 }
-function display_7(){
 
-    if (display.innerHTML == '0') display.innerHTML = '7';
-    else
-    display.innerHTML += '7';
+for (const operator of operators){
+    operator.addEventListener('click', () => {
+        calculator.chooseOperation(operator.innerText);
+        calculator.updateDisplay();
+    });
 }
-function display_8(){
 
-    if (display.innerHTML == '0') display.innerHTML = '8';
-    else
-    display.innerHTML += '8';
-}
-function display_9(){
-
-    if (display.innerHTML == '0') display.innerHTML = '9';
-    else
-    display.innerHTML += '9';
-}
-function display_del(){
-
-    if (display.innerHTML.length == 1) 
-    display.innerHTML = '0';
-
-    if (display.innerHTML != '0' && display.innerHTML.length != 1)
-    display.innerHTML = display.innerHTML.slice(0, (display.innerHTML.length - 1));
-}
-function display_minus(){
-}

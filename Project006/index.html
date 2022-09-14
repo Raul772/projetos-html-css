@@ -13,37 +13,30 @@
 </head>
 <body>
 
-    <main class="container-fluid p-0 bg-light"> 
-        <section class="container-md vh-100 p-5">
-            <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-sm-6 col-xl-5 d-flex flex-column justify-content-center align-items-center p-3 neomorphic">
-                    <div class="row calc-display w-100 font-digital display-5 neomorphic-inset-dark">
-                        <p class="text-light text-end m-0 px-3 py-2" id="display-numbers">0</p>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="keys">
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="" id="_0">0</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_1()" id="_1">1</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_2()" id="_2">2</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_3()" id="_3">3</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_4()" id="_4">4</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_5()" id="_5">5</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_6()" id="_6">6</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_7()" id="_7">7</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_8()" id="_8">8</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_9()" id="_9">9</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_minus()" id="minus">-</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_plus()" id="plus">+</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_multiply()" id="multiply">*</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_divide()" id="divide">/</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_equals()" id="equals">=</button>
-                            <button class="neomorphic-inset p-3 font-default fs-3 btn-hover btn-key" onclick="display_del()" id="del">Del</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="grid-container">
+        <div class="output neumorphic-inset-dark">
+            <div data-previous-operand class="previous-operand font-digital"></div>
+            <div data-current-operand class="current-operand font-digital"></div>
+        </div>
+        <button data-ac class="span-2 neumorphic-inset btn-hover">AC</button>
+        <button data-del class="neumorphic-inset btn-hover">DEL</button>
+        <button data-operator class="neumorphic-inset btn-hover">÷</button>
+        <button data-number class="neumorphic-inset btn-hover">7</button>
+        <button data-number class="neumorphic-inset btn-hover">8</button>
+        <button data-number class="neumorphic-inset btn-hover">9</button>
+        <button data-operator class="neumorphic-inset btn-hover">*</button>
+        <button data-number class="neumorphic-inset btn-hover">4</button>
+        <button data-number class="neumorphic-inset btn-hover">5</button>
+        <button data-number class="neumorphic-inset btn-hover">6</button>
+        <button data-operator class="neumorphic-inset btn-hover">+</button>
+        <button data-number class="neumorphic-inset btn-hover">1</button>
+        <button data-number class="neumorphic-inset btn-hover">2</button>
+        <button data-number class="neumorphic-inset btn-hover">3</button>
+        <button data-operator class="neumorphic-inset btn-hover">-</button>
+        <button data-number class="span-2 neumorphic-inset btn-hover">.</button>
+        <button data-number class="neumorphic-inset btn-hover">0</button>
+        <button data-equals class="neumorphic-inset btn-hover">=</button>
+    </div>
 
     <!-- functionality -->
     <script src="src/js/index.js"></script>

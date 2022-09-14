@@ -11,106 +11,78 @@
 :root{
     --font-display: 'digital-display', sans-serif;
 }
-
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    outline: none;
+    border: none;
+}
 .font-digital{
     font-family: var(--font-display);
 }
 .font-default{
     font-family: 'Roboto', sans-serif;
 }
-
-.neomorphic{
+.neumorphic{
     border-radius: 18px;
     background: linear-gradient(145deg, #ffffff, #dfe0e1);
     box-shadow:  20px 20px 40px #abacad,
                 -20px -20px 40px #ffffff;
 }
-.neomorphic-inset{
+.neumorphic-inset{
     border-radius: 18px;
     background: linear-gradient(145deg, #ffffff, #dfe0e1);
     box-shadow:  5px 5px 9px #b1b1b1,
                  -11px -11px 20px #f7f7f7;
 }
-.neomorphic-inset-dark{
+.neumorphic-inset-dark{
     border-radius: 18px;
     background: linear-gradient(145deg, #9e9e9e, #bcbcbc);
     box-shadow:  5px 5px 10px #a0a0a0, 
                 -5px -5px 10px #d3d3d3;
 }
-
-.keys{
-    width: 100%;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    display: grid;
-    grid-template-areas:'optDel optMinus optPlus optMulti'
-                        'num7 num8 num9 optDivide'
-                        'num4 num5 num6 optEquals'
-                        'num1 num2 num3 num0';
-}
-
-#_0{
-    grid-area: num0;
-}
-#_1{
-    grid-area: num1;
-}
-#_2{
-    grid-area: num2;
-}
-#_3{
-    grid-area: num3;
-}
-#_4{
-    grid-area: num4;
-}
-#_5{
-    grid-area: num5;
-}
-#_6{
-    grid-area: num6;
-}
-#_7{
-    grid-area: num7;
-}
-#_8{
-    grid-area: num8;
-}
-#_9{
-    grid-area: num9;
-}
-#minus{
-    grid-area: optMinus;
-}
-#plus{
-    grid-area: optPlus;
-}
-#multiply{
-    grid-area: optMulti;
-}
-#divide{
-    grid-area: optDivide;
-}
-#Del{
-    grid-area: optDel;
-}
-#equals{
-    grid-area: optEquals;
-}
-
-button{
-    outline: none;
-    border: none;
-}
-.btn-key{
-    min-width: 70px;
-}
 .btn-hover{
-    opacity: 100%;
-    transition: all 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 .btn-hover:hover{
-    background: #ffffff8c;
     transform: scale(102%);
-    opacity: 75%;
+}
+.grid-container{
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: minmax(70px, auto) repeat(5, 50px);
+    grid-gap: 10px;
+    transition: all 0.2 ease-in-out;
+}
+.output{
+    grid-column: 1 / -1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    z-index: 1;
+}
+.previous-operand{
+    color: #ffffffaa;
+    font-size: 1.2rem;
+}
+.current-operand{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.grid-container button{
+    font-size: 1rem;
+}
+.span-2{
+    grid-column-end: span 2;
 }
