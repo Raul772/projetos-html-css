@@ -19,13 +19,9 @@
     --font-presentation: 'Kaushan Script', cursive;
     --font-title: 'Maven Pro', sans-serif;
 }
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
 *::-webkit-scrollbar{
     display: block;
+    position: absolute;
     width: 10px;
 }
 *::-webkit-scrollbar-thumb{
@@ -35,11 +31,10 @@
 *::-webkit-scrollbar-track-piece{
     background-color: #00000000;
 }
-
 body{
+    max-width: 100vw;
     overflow: overlay;
 }
-
 .font-default{
     font-family: var(--font-default);
 }
@@ -63,9 +58,8 @@ header{
 }
 .shape-divider {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
-    width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
@@ -74,7 +68,7 @@ header{
     position: relative;
     display: block;
     width: calc(136% + 1.3px);
-    height: 150px;
+    max-height: 150px;
 }
 .shape-divider .shape-fill {
     fill: #f8f9fa;
