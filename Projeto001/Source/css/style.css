@@ -50,12 +50,19 @@ body{
 .text-purple-1{
     color: var(--cor6);
 }
-header{
-    position: relative;
+header::before{
+    content: "";
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed !important;
     background-image: linear-gradient(to top right, var(--cor6), #ffffff3a), url(../../media/img/header-background01.jpg);
     background-size: cover, cover;
     background-position: center, center;
-    background-attachment: fixed, fixed;
+    z-index: -10;
 }
 .shape-divider {
     position: absolute;
