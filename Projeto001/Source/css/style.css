@@ -60,6 +60,7 @@ body{
 /* General Styling */
 
 header{
+    position: relative;
     overflow: hidden;
     background-image: linear-gradient(to top right, var(--cor6), #ffffff3a), url(../../media/img/header-background01.jpg);
     background-size: cover, cover;
